@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as action from '../constants/productConstant'
-const url = 'https://mernprojectaasif.herokuapp.com/products'
+const url = ''
 export const getProducts = () => async(dispatch) =>{
     try{
         const {data} = await axios.get(`${url}/products`)

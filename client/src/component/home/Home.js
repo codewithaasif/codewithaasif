@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(getProducts())
     }, [dispatch])
-    
+    console.log('result',products)
     return (
         <div>
             <Navbar />

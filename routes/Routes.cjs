@@ -8,7 +8,9 @@ const Getproducts = require('../controller/Product_controler.cjs')
 const GetproductDetail = require('../controller/GetproductDetail.cjs')
 const {addPaymentGateway,paymentResponse} = require('../controller/Payment_controler.cjs')
 
-
+route.get('/', (req,res)=>{
+    res.send('this is the web page')
+})
 route.post('/signup', Usersignup)
 route.post('/login',Userlogin)
 route.get('/products',Getproducts)
