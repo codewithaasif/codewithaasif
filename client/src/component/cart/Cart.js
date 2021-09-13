@@ -18,6 +18,11 @@ const usestyle = makeStyles(theme => ({
         width: '70%',
         height: '65vh',
         margin: '80px 160px',
+        [theme.breakpoints.down('sm')]:{
+            width: '70%',
+            height: '65vh',
+            margin: '60px 50px',
+          }
     },
     imgcomponent: {
         textAlign: 'center',
@@ -33,6 +38,10 @@ const usestyle = makeStyles(theme => ({
         width: '25%',
         '&:hover': {
             background: 'green'
+        },
+        [theme.breakpoints.down('sm')]:{
+        marginTop: 20,
+        width: '80%',
         }
     },
     place: {
@@ -50,7 +59,10 @@ const usestyle = makeStyles(theme => ({
         marginLeft: 'auto',
         '&:hover': {
             background: 'blue'
-        }
+        },
+        [theme.breakpoints.down('sm')]:{
+            width: '50%',
+            }
     },
     main:{
         display: 'flex',

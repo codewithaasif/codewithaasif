@@ -89,7 +89,7 @@ const Headerbtn = ({ setdrawer }) => {
                      
             }
             <Typography className={classes.more}  >More</Typography>
-            <Link to="/cart"  className={classes.cartbox}>
+            <Link to="/cart"  className={classes.cartbox} style={{ textDecoration:'none'}}>
                 <Badge badgeContent={cartItems.length} color="secondary" >
                     <ShoppingCartIcon />
                 </Badge>

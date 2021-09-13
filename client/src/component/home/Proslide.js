@@ -88,8 +88,8 @@ const usestyle = makeStyles(theme => ({
     },
     main:{
         display:'flex'
-    }
-
+    },
+   
 }));
 
 const Proslide = ({ time, title, products }) => {
@@ -134,7 +134,7 @@ const Proslide = ({ time, title, products }) => {
                 >
                     {
                         products.map((product, pro) =>
-                            <Link to={`product/${product.id}`}>
+                            <Link to={`product/${product.id}`} style={{ textDecoration:'none'}}>
                                 <Box className={classes.sliding} key={pro}>
                                     <img src={product.url} alt="" className={classes.image} />
                                     <Box style={{ marginTop: 10 }}>

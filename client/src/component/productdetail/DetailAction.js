@@ -10,7 +10,7 @@ import {PayUsingPaytm} from '../service/Api'
 import {post} from '../../utils/Paytm'
 
 
-const usestyle = makeStyles({
+const usestyle = makeStyles(theme=>({
     leftcontainer:{
         padding:'10px 0 0 30px',
         width:'100%',
@@ -31,6 +31,10 @@ const usestyle = makeStyles({
         marginRight:'10px',
         "&:hover": {
             backgroundColor: "green !important"
+          },
+          [theme.breakpoints.down('sm')]:{
+            width:'50%',
+            fontSize:12
           }
     },
     buynow:{
@@ -39,9 +43,13 @@ const usestyle = makeStyles({
         width:'44%',
         "&:hover": {
             backgroundColor: "blue !important"
+          },
+          [theme.breakpoints.down('sm')]:{
+            width:'45%',
+            fontSize:12
           }
     }
-})
+}));
 
 
 const DetailAction = ({product}) => {

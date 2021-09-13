@@ -4,10 +4,15 @@ import React, { useState } from 'react'
 import { Dialog, DialogContent, makeStyles, Box, Typography, TextField, Button} from '@material-ui/core';
 import { Authenticatesignup , Authenticatelogin} from '../service/Api'
 
-const usestyle = makeStyles({
+const usestyle = makeStyles(theme => ({
     dilog: {
         width: '50vw',
         height: '85vh',
+        [theme.breakpoints.down('sm')]:{
+            width: '100%',
+            height: '100%',
+            display:'flex'
+        }
     },
     image: {
         backgroundImage: `url(${'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png'})`,
@@ -20,6 +25,9 @@ const usestyle = makeStyles({
         '& > *': {
             color: 'white',
             textTransform: 'capitalize'
+        },
+        [theme.breakpoints.down('sm')]:{
+            display:'none'
         }
     },
     login: {
@@ -62,14 +70,17 @@ const usestyle = makeStyles({
         padding: 0,
         marginTop: 'auto',
         textAlign: 'center',
-        fontSize: '14px'
+        fontSize: '14px',
+        [theme.breakpoints.down('sm')]:{
+            marginTop: '10px',
+        }
     },
     err:{
         color:'red',
         fontSize:12,
         marginTop:1
     }
-})
+}));
 
 
 const initvalue = {
@@ -157,7 +168,7 @@ const Login = ({ open, setopen, setname }) => {
                         {
                             account.view === 'Login' ?
                                 <Box className={classes.login}>
-                                    <TextField onChange={(e)=>getlogindata(e)} name='email' label='Enter Name/Mobile number' />
+                                    <TextField onChange={(e)=>getlogindata(e)} name='email' label='Enter E-mail' />
                                     <TextField onChange={(e)=>getlogindata(e)} name='password' label='Enter Password' />
                                     {
                                         err && 
@@ -177,7 +188,7 @@ const Login = ({ open, setopen, setname }) => {
                                     <TextField onChange={(e)=>getsignupdata(e)} name='email' label='Enter E-mail' />
                                     <TextField onChange={(e)=>getsignupdata(e)} name='password' label='Enter Password' />
                                     <Button onClick={() => signupUser()} variant='contained' className={classes.reqbtn} style={{ background: 'blue', color: '#ffffff' }}>Signup</Button>
-                                    <Typography onClick={() => fliplogin()} className={classes.signtext} style={{ marginTop: 'auto' }}>Exisiting User? Login</Typography>
+                                    <Typography onClick={() => fliplogin()} className={classes.signtext} >Exisiting User? Login</Typography>
                                 </Box>
                         }
 

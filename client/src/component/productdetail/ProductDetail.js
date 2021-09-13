@@ -75,6 +75,12 @@ const usestyle = makeStyles(theme =>({
         borderRadius: '50%',
         textAlign:'center',
         marginRight:8
+    },
+    supercoin:{
+        width:400,
+        [theme.breakpoints.down('xs')]:{
+            width:'100%',
+        }
     }
 }))
 
@@ -155,7 +161,7 @@ const ProductDetail = ({ match }) => {
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                   <TableCell colspan={2} ><img src={sellerURL} style={{width:400}} /></TableCell> 
+                                   <TableCell colspan={2} ><img src={sellerURL} className={classes.supercoin}/></TableCell> 
                                 </TableRow>
                                 <TableRow>
                                    <TableCell className={classes.graytext}> description</TableCell> 
