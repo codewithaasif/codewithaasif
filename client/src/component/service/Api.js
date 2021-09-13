@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = ''
+const url = 'https://mernprojectaasif.herokuapp.com'
 
 export const Authenticatesignup = async (user) => {
     try {

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as actionType from '../constants/Cartconsonent'
 
-const url = ''
+const url = 'https://mernprojectaasif.herokuapp.com'
 const addTocart = (id) => async (dispatch) => {
    
     try {
