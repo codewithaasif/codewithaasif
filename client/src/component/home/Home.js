@@ -23,11 +23,11 @@ const Home = () => {
             <Proslide time={true} title='Deals of the Day' products={products} />
             <Add />
             <Covid />
-            {/* <Proslide time={false} title='Top Discount Offers' products={Fashion}/>
+            <Proslide time={false} title='Top Discount Offers' products={Fashion}/>
             <Proslide time={false} title='Best Price On Fashion' products={products}/>
             <Proslide time={false} title='Top Deals on Accessories'  products={Fashion}/>
             <Proslide time={false} title='Men s Footwear' products={products}/>
-            <Proslide time={false} title='Top Picks on'  products={Fashion}/> */}
+            <Proslide time={false} title='Top Picks on'  products={Fashion}/>
 
 
 

@@ -15,7 +15,7 @@ paytmParams['INDUSTRY_TYPE_ID'] = 'Retail';
 paytmParams['ORDER_ID'] = uuid();
 paytmParams['CUST_ID'] = 'jrgCtG46360212431082';
 paytmParams['TXN_AMOUNT'] = '100';
-paytmParams['CALLBACK_URL'] = '/callback';
+paytmParams['CALLBACK_URL'] = 'https://mernprojectaasif.herokuapp.com/callback';
 paytmParams['EMAIL'] = 'aasif@hostivers.com';
 paytmParams['MOBILE_NO'] = '1234567890';
 
