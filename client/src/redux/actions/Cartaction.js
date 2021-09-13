@@ -5,7 +5,7 @@ const url = 'https://mernprojectaasif.herokuapp.com'
 const addTocart = (id) => async (dispatch) => {
    
     try {
-       const {data} = await axios.get(`${url}/product/${id}`)
+       const {data} = await axios.get(`/product/${id}`)
         dispatch({type:actionType.ADD_TO_CART, payload:data})
     } catch (error) {
         console.log('error in cart---->',error.message)
