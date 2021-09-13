@@ -20,7 +20,7 @@ const Home = () => {
         <div>
             <Navbar />
             <Banner />
-            <Proslide time={true} title='Deals of the Day' products={products} />
+            {/* <Proslide time={true} title='Deals of the Day' products={products} /> */}
             <Add />
             <Covid />
             {/* <Proslide time={false} title='Top Discount Offers' products={Fashion}/>

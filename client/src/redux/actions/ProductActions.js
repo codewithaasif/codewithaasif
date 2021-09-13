@@ -1,9 +1,9 @@
 import axios from 'axios'
 import * as action from '../constants/productConstant'
-const url = 'https://mernprojectaasif.herokuapp.com'
+const url = 'mernprojectaasif.herokuapp.com'
 export const getProducts = () => async(dispatch) =>{
     try{
-        const {data} = await axios.get(`/products`)
+        const {data} = await axios.get(`${url}/products`)
         dispatch({type:action.success, payload:data})
         console.warn('api data called by frontend',action.success)
     }catch(error){
@@ -13,8 +13,9 @@ export const getProducts = () => async(dispatch) =>{
 
 export const getProductdetail = (id) => async(dispatch) =>{
     try{
-      const {data} = await axios.get(`/product/${id}`)
+      const {data} = await axios.get(`${url}/product/${id}`)
      dispatch({type:action.ProductdetailSuccess, payload:data})
+     console.warn('api data called by frontend getProductdetail',action.success)
     }catch(error){
        dispatch({type:action.ProductdetailFaild, payload:error.message})
     }
