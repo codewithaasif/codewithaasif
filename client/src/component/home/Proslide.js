@@ -36,11 +36,10 @@ const usestyle = makeStyles(theme => ({
     component: {
         background: '#ffffff',
         height: '360px',
-        width: '80%',
         margin: '10px 0px',
         boxShadow: '0px 0px 3px 1px gray',
         [theme.breakpoints.down('md')]:{
-            width:'100%',
+            width:'100% !important',
         }
     },
     carousel: {
@@ -92,7 +91,7 @@ const usestyle = makeStyles(theme => ({
    
 }));
 
-const Proslide = ({ time, title, products }) => {
+const Proslide = ({ time, title, products, add }) => {
     const classes = usestyle()
     const timerURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg';
     const renderer = ({ hours, minutes, seconds, completed }) => {
@@ -102,10 +101,14 @@ const Proslide = ({ time, title, products }) => {
             return <span>{hours}:{minutes}:{seconds}  Left </span>
         }
     };
-
+    var width = '80%'
+    if(add == false){
+        width = '100%'
+    }
+    
     return (
         <Box  className={classes.main}>
-            <Box className={classes.component}>
+            <Box className={classes.component} style={{width:width}}>
                 <Box className={classes.dealbox}>
                     <Typography className={classes.deal}> {title} </Typography>
                     {
@@ -149,9 +152,13 @@ const Proslide = ({ time, title, products }) => {
 
                 </Carousel>
             </Box>
-            <Box className={classes.add}>
+            {
+                add ? 
+                <Box className={classes.add}>
                 <img src={adURL} alt=""  className={classes.addimg}/>
-            </Box>
+                </Box>
+                :null
+            }
         </Box>
     )
 }

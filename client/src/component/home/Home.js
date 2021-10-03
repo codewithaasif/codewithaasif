@@ -15,19 +15,19 @@ const Home = () => {
     useEffect(() => {
         dispatch(getProducts())
     }, [dispatch])
-    console.log('result',products)
+    console.warn('result',products)
     return (
         <div>
             <Navbar />
             <Banner />
-            <Proslide time={true} title='Deals of the Day' products={products} />
+            <Proslide time={true} title='Deals of the Day' products={products} add={true}/>
             <Add />
             <Covid />
-            <Proslide time={false} title='Top Discount Offers' products={Fashion}/>
-            <Proslide time={false} title='Best Price On Fashion' products={products}/>
-            <Proslide time={false} title='Top Deals on Accessories'  products={Fashion}/>
-            <Proslide time={false} title='Men s Footwear' products={products}/>
-            <Proslide time={false} title='Top Picks on'  products={Fashion}/>
+            <Proslide time={false} title='Top Discount Offers' products={Fashion} add={false}/>
+            <Proslide time={false} title='Best Price On Fashion' products={products} add={false}/>
+            <Proslide time={false} title='Top Deals on Accessories'  products={Fashion} add={false}/>
+            <Proslide time={false} title='Men s Footwear' products={products} add={false}/>
+            <Proslide time={false} title='Top Picks on'  products={Fashion} add={false}/>
 
 
 

@@ -34,7 +34,7 @@ if(process.env.NODE_ENV == "production"){
 }
 
     
-app.listen(PORT, ()=>console.log(`the server is started on port ${PORT}`));
+app.listen(PORT, ()=>console.log(`the server is started at port ${PORT}`));
 //save data in database
 
  Ddata()

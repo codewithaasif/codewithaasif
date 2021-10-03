@@ -8,7 +8,7 @@ const Ddata = async() => {
       await Product.deleteMany({})
     await Product.insertMany(defultproduct)
 
-    console.log('data has been imported successfully')
+    console.log('data has been imported successfully!!')
    }catch(error){
     console.log('errors............:',error.message)
    }
