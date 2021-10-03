@@ -5,7 +5,7 @@ export const getProducts = () => async(dispatch) =>{
     try{
         const {data} = await axios.get(`/products`)
         dispatch({type:action.success, payload:data})
-        console.log('api data called by frontend',action.success)
+        console.log('api data called by frontend!',action.success)
     }catch(error){
         dispatch({type:action.fail, payload:error.message})
     }
